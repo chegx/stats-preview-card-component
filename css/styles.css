@@ -1,0 +1,140 @@
+:root {
+  --dark-blue: hsl(233, 47%, 7%);
+  --desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white-main-p: hsla(0, 0%, 100%, 0.75);
+  --white-stat-h: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  background-color: var(--desaturated-blue);
+  width: 20.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#desktop {
+  display: none;
+}
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 64%, 40%);
+  opacity: 0.5;
+}
+
+article {
+  padding: 2.5rem 2rem 2.3rem;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+span {
+  color: var(--soft-violet);
+}
+
+p {
+  color: var(--white-main-p);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-top: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  color: var(--white-stat-h);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+@media screen and (min-width: 1020px) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1110px;
+  }
+
+  article {
+    width: 570px;
+    padding: 4.5rem 7rem 0.5rem 4.5rem;
+    text-align: left;
+  }
+
+  .container {
+    width: 540px;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  #desktop {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  p {
+    margin-top: 1.5rem;
+    margin-bottom: 4.4rem;
+  }
+
+  .stat {
+    flex-direction: row;
+    gap: 3.9rem;
+  }
+}
