@@ -31,6 +31,7 @@ img {
   width: 100%;
   height: 100%;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 #desktop {
@@ -38,17 +39,7 @@ img {
 }
 
 .container {
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsl(277, 64%, 40%);
-  opacity: 0.5;
+  background-color: var(--soft-violet);
 }
 
 article {
